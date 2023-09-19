@@ -9,7 +9,6 @@ const initialState = {
 
 export const getGreeting = createAsyncThunk('greetings/random', async () => {
   const greeting = await axios.get('api/greetings');
-  console.log("hello")
   return await greeting.data;
 });
 
